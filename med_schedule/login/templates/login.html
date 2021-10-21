@@ -1,0 +1,56 @@
+<style>
+	div {
+	  margin-left: auto;
+	  margin-right: auto;
+	  height: 400px;
+	  width: 300px;
+	  background-color: powderblue;
+	}
+
+	input[type=text] {
+	  width: 70%;
+	  padding: 8px 10px;
+	  margin: 8px 0;
+	  box-sizing: border-box;
+	}
+
+	input[type=submit] {
+	  width: 30%;
+	  padding: 8px 10px;
+	  margin: 8px 0;
+	  box-sizing: border-box;
+	}
+
+</style>
+<body>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<div align="center">
+		<form method="post">
+			{% csrf_token %}
+			<br/>
+			<br/>
+			<br/>
+			<h2>Sign In</h2>
+			<br/>
+			<p style="color:red;">{{error}}</p>
+			<input type='text' align='center' name='name' placeholder='username'/>
+			<br/>
+			<br/>
+			<input type='text' align='center' name='password' placeholder='password'/>
+			<br/>
+			<br/>
+			<input type='submit' align='center' name='but' value='login'/>
+			<input type='submit' align='center' name='but' value='register'/>
+		</form>
+	</div>
+</body>
+

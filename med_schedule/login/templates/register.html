@@ -1,0 +1,65 @@
+<style>
+
+	div {
+	  margin-left: auto;
+	  margin-right: auto;
+	  height: 450px;
+	  width: 300px;
+	  background-color: powderblue;
+	}
+
+	input[type=text] {
+	  width: 70%;
+	  padding: 8px 10px;
+	  margin: 8px 0;
+	  box-sizing: border-box;
+	}
+
+	input[type=submit] {
+	  width: 30%;
+	  padding: 8px 10px;
+	  margin: 8px 0;
+	  box-sizing: border-box;
+	}
+
+	input[type=number] {
+	  width: 50%;
+	  padding: 8px 10px;
+	  margin: 8px 0;
+	  box-sizing: border-box;
+	}
+
+</style>
+<body>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<div align='center'>
+		<form method="post">
+			{% csrf_token %}
+			<br/><br/>
+			<h2>Register User</h2>
+			<br/>
+			<p style="color:red;">{{error}}</p>
+			<input type='text' align='center' name='name' placeholder='username'/>
+			<br/>
+			<input type='text' align='center' name='password' placeholder='password'/>
+			<br/>
+			<input type='number' align='center' name='age' placeholder='age'/>
+			<br/>
+			<select align='center' name="gender">
+			  <option value="M">M</option>
+			  <option value="F">F</option>
+			</select>
+			<br/>
+			<input type='number' align='center' name='cnumber' placeholder='contact number'/>
+			<br/>
+			<input type='submit' align='center' name='but' value='Create User'/>
+		</form>
+	</div>
+</body>
